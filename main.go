@@ -1,10 +1,10 @@
 package main
 
 import (
-	"awesomeProject/imooc"
-	"awesomeProject/imooc/moody"
 	"cmp"
 	"fmt"
+	"github.com/story-not-story/learngolang/imooc"
+	"github.com/story-not-story/learngolang/imooc/moody"
 	"sync"
 	"time"
 )
@@ -108,9 +108,9 @@ func devideZero(x int, y int) int {
 
 type MyNumber interface {
 	~int | ~int8 | ~int16 | ~int32 | ~int64 |
-		~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |
-		~float32 | ~float64 |
-		~string
+	~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |
+	~float32 | ~float64 |
+	~string
 }
 
 func min1[T MyNumber](x, y T) T {
@@ -120,9 +120,9 @@ func min1[T MyNumber](x, y T) T {
 	return y
 }
 func min2[MyNumber2 ~int | ~int8 | ~int16 | ~int32 | ~int64 |
-	~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |
-	~float32 | ~float64 |
-	~string](x, y MyNumber2) MyNumber2 {
+~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |
+~float32 | ~float64 |
+~string](x, y MyNumber2) MyNumber2 {
 	if x < y {
 		return x
 	}
@@ -145,7 +145,7 @@ func main() {
 	fmt.Println(myLesson.LessonName())
 	/*err := os.Mkdir("log", 0777)
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Printqln(err.Error())
 	}
 	err2 := os.MkdirAll("log/test1/test2", 0777)
 	if err2 != nil {
